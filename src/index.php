@@ -1,3 +1,3 @@
 <?php
-    header('Location: /Smart-Care/modele/index.php');
+    header('Location: /Modele/index.php');
 ?>

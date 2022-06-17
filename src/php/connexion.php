@@ -1,8 +1,8 @@
 <?php
-    $servername = $_ENV['MYSQL_HOST'];
-    $username = $_ENV['MYSQL_USER']; //Créer un nouvel utilisateur
-    $password = $_ENV['MYSQL_PASSWORD']; // Mot de passe du nouvel utilisateur
-    $dbname = $_ENV['MYSQL_DATABASE'];
+    $servername = "herogu.garageisep.com";
+    $username = "lSexcXMy03_app_g3d"; //Créer un nouvel utilisateur
+    $password = "uMWyer4Yak9fClUk"; // Mot de passe du nouvel utilisateur
+    $dbname = "b8F6e3Zn63_app_g3d";
     // Create connection
     global $conn;
     $conn = new mysqli($servername, $username, $password, $dbname);

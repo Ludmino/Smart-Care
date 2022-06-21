@@ -94,5 +94,5 @@ include_once "../php/translate.php";
         include 'footer.php';
     ?>
 
-</body>
+    </body>
 </html>

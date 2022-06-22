@@ -123,7 +123,7 @@ include_once "../php/translate.php";
     </div>
     </div>
     
-    <script src=../javascript/Tabs.js></script>
+    <script src=../javascript/tabs.js></script>
     <script src=../javascript/chart.js></script>
 
     <?php

@@ -23,6 +23,18 @@ include_once "../php/translate.php";
     <link rel='stylesheet' href='../css/common.css'>
 </head>
 <body>
+    
+      <?php
+        if(!isset($_SESSION)) 
+        { 
+            session_start(); 
+        }
+        if (!isset($_SESSION['connected'])) {
+            header('Location: login.php?error=6');
+        }
+        include '../php/navbar.php';
+    ?>
+    
     <?php
         $ch = curl_init();
         curl_setopt(

@@ -37,7 +37,7 @@ include_once "../php/translate.php";
         //echo("$data");
 
         require  '../php/connexion.php';
-        $sql =  "SELECT `id_trame` FROM `temperature_corps` WHERE id_user = 13 ORDER BY id_trame DESC LIMIT 1;";
+        $sql =  "SELECT `id_trame` FROM `temperature_corps` WHERE id_user = 2 ORDER BY id_trame DESC LIMIT 1;";
         foreach  ($conn->query($sql) as $row) {
             $idtrame=0;
             $idtrame = $row['id_trame'];

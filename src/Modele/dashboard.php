@@ -24,28 +24,39 @@ include_once "../php/translate.php";
 </head>
 <body>
     <?php
-        if(!isset($_SESSION)) 
-        { 
-            session_start(); 
-        }
-        if (!isset($_SESSION['connected'])) {
-            header('Location: login.php?error=6');
-        }
-        include '../php/navbar.php';
-    ?>
-
-    <?php
         $ch = curl_init();
         curl_setopt(
         $ch,
         CURLOPT_URL,
-        "http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=1337");
+        "http://projets-tomcat.isep.fr:8080/appService/?ACTION=GETLOG&TEAM=1338");
         curl_setopt($ch, CURLOPT_HEADER, FALSE);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         $data = curl_exec($ch);
         curl_close($ch);
-        echo "Raw Data:<br />";
-        echo("$data");
+        //echo "Raw Data:<br />";
+        //echo("$data");
+
+        require  '../php/connexion.php';
+        $sql =  "SELECT `id_trame` FROM `temperature_corps` WHERE id_user = 13 ORDER BY id_trame DESC LIMIT 1;";
+        foreach  ($conn->query($sql) as $row) {
+            $idtrame=0;
+            $idtrame = $row['id_trame'];
+        }
+
+        $data_tab = str_split($data,33);
+        $trame = $data_tab[0];
+        for($i=$idtrame, $size=count($data_tab); $i<$size-1; $i++){
+            $trame = $data_tab[$i];
+            list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
+            sscanf($trame,"%1s%4s%1s%1s%2s%4x%4s%2s%4s%2s%2s%2s%2s%2s");
+            $stmt = $conn->prepare("INSERT INTO temperature_corps(Date, id_user, Valeur,id_trame)  VALUES  (?, ?, ?, ?)");
+            $idTrameInsert = intval($i+1);
+            $stmt->bind_param("sidi", $trameDate, $id_user, $valeurTrame,$idTrameInsert);
+            $trameDate = "$year-$month-$day $hour:$min:$sec";
+            $id_user = $_SESSION['id'];
+            $valeurTrame = intval($v)*3.3/4096*100;
+            $stmt->execute();
+        }   
     ?>
     
     <div class="boite">

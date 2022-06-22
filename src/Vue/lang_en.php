@@ -119,5 +119,6 @@ define("_helpText3", "Contact us at the following address: contactus@mail.com, w
 define("_contactTitle1", "By email:");
 define("_contactTitle2", "By phone:");
 
-
+define("_Allumer", "On");
+define("_Eteint", "Off");
 ?>

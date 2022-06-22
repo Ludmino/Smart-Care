@@ -3,6 +3,7 @@ if(!isset($_SESSION))
 { 
     session_start(); 
 }
+echo("echec");
 // Include Language file
 include_once "../php/translate.php";
 ?>

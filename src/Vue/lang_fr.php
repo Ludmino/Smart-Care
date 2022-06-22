@@ -120,4 +120,6 @@ define("_helpText3", "Contactez nous à l'adresse suivante: contacteznous@mail.c
 define("_contactTitle1", "Par mail :");
 define("_contactTitle2", "Par téléphone :");
 
+define("_Allumer", "Allumer");
+define("_Eteint", "Eteindre");
 ?>

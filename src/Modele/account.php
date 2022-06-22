@@ -96,6 +96,9 @@ include_once "../php/translate.php";
         include 'footer.php';
     ?>
     <a href='../php/disconnect.php' class="disconnect"><div class='write'><?= _Disconnect ?></div></a>
+    <a href='../php/ledOn.php' class="disconnect"><div class='write'><?= _Allumer ?></div></a>
+    <a href='../php/ledOff.php' class="disconnect"><div class='write'><?= _Eteint ?></div></a>
+
 </body>
 
 </body>

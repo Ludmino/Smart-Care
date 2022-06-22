@@ -23,8 +23,7 @@ include_once "../php/translate.php";
     <link rel='stylesheet' href='../css/common.css'>
 </head>
 <body>
-    
-      <?php
+<?php
         if(!isset($_SESSION)) 
         { 
             session_start(); 
@@ -34,7 +33,7 @@ include_once "../php/translate.php";
         }
         include '../php/navbar.php';
     ?>
-    
+
     <?php
         $ch = curl_init();
         curl_setopt(
@@ -70,7 +69,7 @@ include_once "../php/translate.php";
             $stmt->execute();
         }   
     ?>
-    
+
     <div class="boite">
     <div id="RC" class="tabcontent">
         <div class="Canvas">
@@ -124,12 +123,12 @@ include_once "../php/translate.php";
     </div>
     </div>
     
-    <script src=../javascript/tabs.js></script>
+    <script src=../javascript/Tabs.js></script>
     <script src=../javascript/chart.js></script>
 
     <?php
         include 'footer.php';
     ?>
 
-    </body>
+</body>
 </html>

@@ -90,7 +90,7 @@ include_once "../php/translate.php";
     </script>
 </div>
 
-<script src=../javascript/tabs.js></script>
+<script src=../javascript/Tabs.js></script>
 
     <?php
         include 'footer.php';

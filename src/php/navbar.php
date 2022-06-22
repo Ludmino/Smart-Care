@@ -4,7 +4,7 @@
                 session_start(); 
             } 
         if (isset($_SESSION['connected']) && $_SESSION['connected']==true ) {
-            include '../modele/navbarconnected.php';
+            include '../Modele/navbarconnected.php';
         } else {
-            include '../modele/navbardisconnected.php';}
+            include '../Modele/navbardisconnected.php';}
 ?>

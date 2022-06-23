@@ -96,8 +96,8 @@ include_once "../php/translate.php";
         include 'footer.php';
     ?>
     <a href='../php/disconnect.php' class="disconnect"><div class='write'><?= _Disconnect ?></div></a>
-    <a href='../php/ledOn.php' class="disconnect"><div class='write'><?= Smart-Care Logo ?></div></a>
-    <a href='../php/ledOff.php' class="disconnect"><div class='write'><?= Isep Logo ?></div></a>
+    <a href='../php/ledOn.php' class="disconnect"><div class='write'>Smart-Care Logo</div></a>
+    <a href='../php/ledOff.php' class="disconnect"><div class='write'>Isep Logo</div></a>
 
 </body>
 

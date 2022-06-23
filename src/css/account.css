@@ -77,3 +77,12 @@
     float: right;
     margin-right: 5vw;
   }
+
+  .logoLink{
+    font-size: 24px;
+    color: blue;
+    font-style: none;
+    margin-top: 1vh;
+    float: right;
+    margin-right: 5vw;
+  }
